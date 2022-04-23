@@ -1,15 +1,16 @@
 #include "pmpch.h"
 
-void TestTest()
+
+void TestTest(std::string s)
 {
-	std::cout << "This is TestTest from MADR" << std::endl;
+	std::cout << s << std::endl;
 }
 
 int main()
 {
 	while (true)
 	{
-		TestTest();
+		TestTest("This is TestTest from MAAD");
 
 	}
 	return 0;

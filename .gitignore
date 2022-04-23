@@ -24,3 +24,5 @@ MADRengine/_bin-int/Debug-windows-x86_64/ProjectMegaton/ProjectMegaton.tlog/link
 MADRengine/_bin-int/Debug-windows-x86_64/ProjectMegaton/ProjectMegaton.tlog/link.read.1.tlog
 MADRengine/_bin-int/Debug-windows-x86_64/ProjectMegaton/ProjectMegaton.tlog/link.write.1.tlog
 MADRengine/_bin-int/Debug-windows-x86_64/ProjectMegaton/ProjectMegaton.tlog/ProjectMegaton.lastbuildstate
+MADRengine/.vs/ProjectMegaton/v16/ipch/985b98b5aeeb21bd.ipch
+*.ipch

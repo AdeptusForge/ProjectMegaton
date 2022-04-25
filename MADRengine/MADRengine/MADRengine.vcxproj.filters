@@ -4,21 +4,30 @@
     <Filter Include="MADRengine">
       <UniqueIdentifier>{3F10B25D-2BC8-F3AA-94CF-CC0680A68E9B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MADRengine\Code">
+      <UniqueIdentifier>{b13aab7a-0f1f-4ec3-8aaa-99992d1370c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MADRengine\MADRpch.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
-    <ClInclude Include="src\main.h">
-      <Filter>MADRengine</Filter>
+    <ClInclude Include="src\MADRengine\TimeKeeping.h">
+      <Filter>MADRengine\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\main.h">
+      <Filter>MADRengine\Code</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MADRengine\MADRpch.cpp">
       <Filter>MADRengine</Filter>
     </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>MADRengine</Filter>
+    <ClCompile Include="src\MADRengine\main.cpp">
+      <Filter>MADRengine\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\TimeKeeping.cpp">
+      <Filter>MADRengine\Code</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

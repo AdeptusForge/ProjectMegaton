@@ -15,17 +15,18 @@ workspace "ProjectMegaton"
 
 IncludeDir = {}
 
-IncludeDir["GLFW"] = "MADRengine/_thirdparty/GLFW/include"
-IncludeDir["Glad"] = "MADRengine/_thirdparty/Glad/include"
-IncludeDir["ImGui"] = "MADRengine/_thirdparty/imgui"
-IncludeDir["glm"] = "MADRengine/_thirdparty/glm"
-IncludeDir["json"] = "MADRengine/_thirdparty/cppjson/include"
-IncludeDir["magicenum"] = "MADRengine/_thirdparty/magicenum/inc"
-IncludeDir["fmod"] = "MADRengine/_thirdparty/fmod/inc"
-IncludeDir["freetype"] = "MADRengine/_thirdparty/freetype/inc"
-IncludeDir["rttr"] = "MADRengine/_thirdparty/RTTR/include"
-IncludeDir["stbi"] = "MADRengine/_thirdparty/stbi/inc"
-IncludeDir["boost"] = "MADRengine/_thirdparty/Boost/inc"
+IncludeDir["GLFW"] = "MADRengine/_thirdparty/includes/GLFW/include"
+IncludeDir["Glad"] = "MADRengine/_thirdparty/includes/Glad/include"
+IncludeDir["ImGui"] = "MADRengine/_thirdparty/includes/imgui"
+IncludeDir["glm"] = "MADRengine/_thirdparty/includes/glm"
+IncludeDir["json"] = "MADRengine/_thirdparty/includes/cppjson/include"
+IncludeDir["magicenum"] = "MADRengine/_thirdparty/includes/magicenum/inc"
+IncludeDir["fmod"] = "MADRengine/_thirdparty/includes/fmod/inc"
+IncludeDir["freetype"] = "MADRengine/_thirdparty/includes/freetype/inc"
+IncludeDir["rttr"] = "MADRengine/_thirdparty/includes/RTTR/include"
+IncludeDir["stbi"] = "MADRengine/_thirdparty/includes/stbi/inc"
+IncludeDir["boost"] = "MADRengine/_thirdparty/includes/Boost/inc"
+IncludeDir["SDL"] = "MADRengine/_thirdparty/includes/SDL2"
 
 group "Dependencies"
 --[[
@@ -63,7 +64,7 @@ project "MADRengine"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/_thirdparty/spdlog/include",
+        "%{prj.name}/_thirdparty/includes/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
         "%{IncludeDir.ImGui}",
@@ -72,13 +73,16 @@ project "MADRengine"
         "%{IncludeDir.magicenum}",
         "%{IncludeDir.freetype}",
         "%{IncludeDir.rttr}",
-		"%{IncludeDir.stbi}",
-        "%{IncludeDir.boost}"
+        "%{IncludeDir.stbi}",
+        "%{IncludeDir.boost}",
+        "%{IncludeDir.SDL}"
     }
 
     links
     {
-        "glfw3"
+        "glfw3",
+        "SDL2",
+        "SDL2main"
     }
 
     flags

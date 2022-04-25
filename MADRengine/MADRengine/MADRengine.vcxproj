@@ -76,7 +76,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MADR_ENABLE_ASSERTS;MADR_DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;_thirdparty\spdlog\include;_thirdparty\GLFW\include;_thirdparty\Glad\include;_thirdparty\imgui;_thirdparty\glm;_thirdparty\cppjson\include;_thirdparty\magicenum\inc;_thirdparty\freetype\inc;_thirdparty\RTTR\include;_thirdparty\stbi\inc;_thirdparty\Boost\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;_thirdparty\includes\spdlog\include;_thirdparty\includes\GLFW\include;_thirdparty\includes\Glad\include;_thirdparty\includes\imgui;_thirdparty\includes\glm;_thirdparty\includes\cppjson\include;_thirdparty\includes\magicenum\inc;_thirdparty\includes\freetype\inc;_thirdparty\includes\RTTR\include;_thirdparty\includes\stbi\inc;_thirdparty\includes\Boost\inc;_thirdparty\includes\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -89,7 +89,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -97,7 +97,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MADR_ENABLE_ASSERTS;MADR_RELEASE;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;_thirdparty\spdlog\include;_thirdparty\GLFW\include;_thirdparty\Glad\include;_thirdparty\imgui;_thirdparty\glm;_thirdparty\cppjson\include;_thirdparty\magicenum\inc;_thirdparty\freetype\inc;_thirdparty\RTTR\include;_thirdparty\stbi\inc;_thirdparty\Boost\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;_thirdparty\includes\spdlog\include;_thirdparty\includes\GLFW\include;_thirdparty\includes\Glad\include;_thirdparty\includes\imgui;_thirdparty\includes\glm;_thirdparty\includes\cppjson\include;_thirdparty\includes\magicenum\inc;_thirdparty\includes\freetype\inc;_thirdparty\includes\RTTR\include;_thirdparty\includes\stbi\inc;_thirdparty\includes\Boost\inc;_thirdparty\includes\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -114,7 +114,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|x64'">
@@ -122,7 +122,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MADR_DIST;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;_thirdparty\spdlog\include;_thirdparty\GLFW\include;_thirdparty\Glad\include;_thirdparty\imgui;_thirdparty\glm;_thirdparty\cppjson\include;_thirdparty\magicenum\inc;_thirdparty\freetype\inc;_thirdparty\RTTR\include;_thirdparty\stbi\inc;_thirdparty\Boost\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;_thirdparty\includes\spdlog\include;_thirdparty\includes\GLFW\include;_thirdparty\includes\Glad\include;_thirdparty\includes\imgui;_thirdparty\includes\glm;_thirdparty\includes\cppjson\include;_thirdparty\includes\magicenum\inc;_thirdparty\includes\freetype\inc;_thirdparty\includes\RTTR\include;_thirdparty\includes\stbi\inc;_thirdparty\includes\Boost\inc;_thirdparty\includes\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -139,16 +139,18 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\MADRengine\MADRpch.h" />
-    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\MADRengine\TimeKeeping.h" />
+    <ClInclude Include="src\MADRengine\main.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MADRengine\MADRpch.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MADRengine\TimeKeeping.cpp" />
+    <ClCompile Include="src\MADRengine\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

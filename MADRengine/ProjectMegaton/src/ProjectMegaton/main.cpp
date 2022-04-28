@@ -1,5 +1,5 @@
 #include "pmpch.h"
-#include "MADRengine/main.h"
+#include "MADRengine/EntryPoint.h"
 
 
 int main()

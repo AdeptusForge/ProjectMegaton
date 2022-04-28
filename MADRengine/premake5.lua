@@ -15,18 +15,19 @@ workspace "ProjectMegaton"
 
 IncludeDir = {}
 
-IncludeDir["GLFW"] = "MADRengine/_thirdparty/includes/GLFW/include"
-IncludeDir["Glad"] = "MADRengine/_thirdparty/includes/Glad/include"
-IncludeDir["ImGui"] = "MADRengine/_thirdparty/includes/imgui"
+IncludeDir["GLFW"] = "MADRengine/_thirdparty/includes/GLFW"
+IncludeDir["Glad"] = "MADRengine/_thirdparty/includes/glad"
+IncludeDir["ImGui"] = "MADRengine/_thirdparty/includes/imgui-master"
 IncludeDir["glm"] = "MADRengine/_thirdparty/includes/glm"
-IncludeDir["json"] = "MADRengine/_thirdparty/includes/cppjson/include"
-IncludeDir["magicenum"] = "MADRengine/_thirdparty/includes/magicenum/inc"
+IncludeDir["nlohmann"] = "MADRengine/_thirdparty/includes/nlohmann"
+IncludeDir["magicenum"] = "MADRengine/_thirdparty/includes/magic_enum/include"
 IncludeDir["fmod"] = "MADRengine/_thirdparty/includes/fmod/inc"
 IncludeDir["freetype"] = "MADRengine/_thirdparty/includes/freetype/inc"
 IncludeDir["rttr"] = "MADRengine/_thirdparty/includes/RTTR/include"
 IncludeDir["stbi"] = "MADRengine/_thirdparty/includes/stbi/inc"
 IncludeDir["boost"] = "MADRengine/_thirdparty/includes/Boost/inc"
 IncludeDir["SDL"] = "MADRengine/_thirdparty/includes/SDL2"
+
 
 group "Dependencies"
 --[[
@@ -69,7 +70,7 @@ project "MADRengine"
         "%{IncludeDir.Glad}",
         "%{IncludeDir.ImGui}",
         "%{IncludeDir.glm}",
-        "%{IncludeDir.json}",
+        "%{IncludeDir.nlohmann}",
         "%{IncludeDir.magicenum}",
         "%{IncludeDir.freetype}",
         "%{IncludeDir.rttr}",

@@ -3,7 +3,6 @@
 #include "gtc/matrix_transform.hpp"
 #include "gtc/type_ptr.hpp"
 
-
 #pragma region Event Reqs
 class EventListener;
 enum class EventType
@@ -16,8 +15,6 @@ enum class EventType
 	NarrativeEvent,
 	UIEvent,
 };
-
-
 
 class EventData
 {

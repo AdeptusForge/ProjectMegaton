@@ -12,7 +12,8 @@
 class Shader
 {
 public:
-	// the program ID
+	// the program ID. Doesn't use the MADR_ID system currently, 
+	// although it potentially could in the future.
 	unsigned int ID;
 
 	// constructor reads and builds the shader

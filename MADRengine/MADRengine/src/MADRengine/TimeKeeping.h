@@ -1,14 +1,13 @@
 #pragma once
 #include "MADRpch.h"
-#include "SDL_timer.h"
 #include "glfw3.h"
-
+#include "glm.hpp"
 
 void TimeStartup();
 int GetCurrentTick();
-//void UpdateTime(GLFWwindow*);
+void UpdateTime(/*GLFWwindow**/);
 
-unsigned int SecondsToFrames(float seconds);
+//unsigned int SecondsToFrames(float seconds);
 
 //Widely used frame-locked timer. 
 //Timer starts counting from 1 instead of 0, like all clocks.
@@ -45,7 +44,7 @@ public:
 	{
 		TimerEnd();
 	}
-	void RunTimer()
+	void UnpauseTimer()
 	{
 		paused = false;
 	};

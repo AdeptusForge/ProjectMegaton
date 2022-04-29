@@ -1,8 +1,22 @@
 #include "MADRengine/MADRpch.h"
 #include "EntryPoint.h"
+#include "SDL.h"
 
-void TestTest(std::string s)
+bool EngineStartup() 
 {
-	std::cout << s << std::endl;
+	SDL_Init(SDL_INIT_VIDEO);
+	return true;
 }
 
+bool EngineRunning() 
+{
+
+	return true;
+}
+void CentralLoop() 
+{
+	while (EngineRunning())
+	{
+		UpdateTime();
+	}
+}

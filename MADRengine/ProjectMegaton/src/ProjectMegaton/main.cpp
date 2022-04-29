@@ -4,9 +4,6 @@
 
 int main()
 {
-	while (true)
-	{
-		TestTest("This is TestTest from MAAD");
-	}
+	CentralLoop();
 	return 0;
 }

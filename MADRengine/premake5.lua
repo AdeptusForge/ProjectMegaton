@@ -27,7 +27,8 @@ IncludeDir["rttr"] = "MADRengine/_thirdparty/includes/RTTR/include"
 IncludeDir["stbi"] = "MADRengine/_thirdparty/includes/stbi/inc"
 IncludeDir["boost"] = "MADRengine/_thirdparty/includes/Boost/inc"
 IncludeDir["SDL"] = "MADRengine/_thirdparty/includes/SDL2"
-
+IncludeDir["KHR"] = "MADRengine/_thirdparty/includes/KHR"
+IncludeDir["LIBS"] = "MADRengine/_thirdparty/Libs"
 
 group "Dependencies"
 --[[
@@ -76,14 +77,15 @@ project "MADRengine"
         "%{IncludeDir.rttr}",
         "%{IncludeDir.stbi}",
         "%{IncludeDir.boost}",
-        "%{IncludeDir.SDL}"
+        "%{IncludeDir.SDL}",
+        "%{IncludeDir.KHR}"
     }
 
     links
     {
-        "glfw3",
-        "SDL2",
-        "SDL2main"
+        "glfw3.lib",
+        "SDL2.lib",
+        "SDL2main.lib"
     }
 
     flags
@@ -190,16 +192,17 @@ project "ProjectMegaton"
         "MADRengine/src",
         "MADRengine/_thirdparty/spdlog/include",
         "MADRengine/_thirdparty/",
-        "MADRengine/_thirdparty/Glad/include",
-        "MADRengine/_thirdparty/GLFW/include",
-        "MADRengine/_thirdparty/glm",
         "%{IncludeDir.ImGui}",
         "%{IncludeDir.glm}",
         "%{IncludeDir.json}",
         "%{IncludeDir.magicenum}",
         "%{IncludeDir.freetype}",
         "%{IncludeDir.rttr}",
-		"%{IncludeDir.stbi}"
+		    "%{IncludeDir.stbi}",
+        "%{IncludeDir.SDL}",
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.KHR}"
         
     }
 

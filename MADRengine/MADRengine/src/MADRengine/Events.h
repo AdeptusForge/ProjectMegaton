@@ -1,19 +1,24 @@
+#pragma once
 #include "MADRpch.h"
 #include "glm.hpp"
 #include "gtc/matrix_transform.hpp"
 #include "gtc/type_ptr.hpp"
+#include "Input.h"
 
 #pragma region Event Reqs
 class EventListener;
 enum class EventType
 {
-	EngineEvent,
-	InputEvent,
-	InventoryEvent,
-	SoundEvent,
-	MapEvent,
-	NarrativeEvent,
-	UIEvent,
+	Engine_Event,
+	Input_Event,
+	Inventory_Event,
+	Sound_Event,
+	Map_Event,
+	Narrative_Event,
+	UI_Event,
+	CollisionEvent,
+
+
 };
 
 class EventData
@@ -29,6 +34,7 @@ private:
 	std::map<std::string, glm::vec2 >::iterator vec2Iter;
 	std::map<std::string, glm::vec3 > vec3Data;
 	std::map<std::string, glm::vec3 >::iterator vec3Iter;
+	InputFrame inputs;
 
 public:
 #pragma region Setters
@@ -60,6 +66,10 @@ public:
 		vec3Iter = vec3Data.begin();
 		vec3Data.insert({ tag, value });
 	}
+	void SetInputs(InputFrame i)
+	{
+		inputs = i;
+	}
 #pragma endregion
 
 #pragma region Getters
@@ -68,7 +78,7 @@ public:
 	const float GetFloat(std::string tag) { return floatData.find(tag)->second; }
 	const glm::vec2 GetVec2(std::string tag) { return vec2Data.find(tag)->second; }
 	const glm::vec3 GetVec3(std::string tag) { return vec3Data.find(tag)->second; }
-
+	const InputFrame GetInputs() { return inputs; }
 #pragma endregion
 public:
 	EventData() {};
@@ -83,11 +93,10 @@ public:
 
 	EVENT(EventType etype, EventData edata, std::string trigger = "Undefined Trigger") : Etype(etype), data(edata), triggeredBy(trigger) {};
 	EVENT(EventType etype, std::string trigger = "Undefined Trigger") : Etype(etype), triggeredBy(trigger) { data = EventData(); };
-	EVENT(std::string trigger) : Etype(EventType::EngineEvent), triggeredBy(trigger) {};
+	EVENT(std::string trigger) : Etype(EventType::Engine_Event), triggeredBy(trigger) {};
 	EVENT() : Etype(), triggeredBy("Undefined Trigger") {};
 };
 
-void EventManagerUpdate();
 void AddEventListener(EventListener* newListener, EventType criterion);
 void AddEventListener(EventListener* newListener);
 void RemoveEventListener(EventListener* removee);
@@ -170,4 +179,13 @@ public:
 	}
 	int GetTotalListeners() { return (int)listeners.size(); };
 };
+void EventManagerUpdate();
+void QueueEvent(EVENT);
+void SendEventImmediately(EVENT e);
+void AddEventListener(EventListener* newListener, EventType criterion);
+void AddEventListener(EventListener* newListener);
+void RemoveEventListener(EventListener* removee);
+void EventStartup();
+
+
 #pragma endregion

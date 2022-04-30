@@ -1,6 +1,9 @@
 #include "TimeKeeping.h"
-#include "Events.h"
 #include "SDL_timer.h"
+#include "Input.h"
+#include "Events.h"
+#include "glfw3.h"
+
 
 #define FIXED_UPDATE_RATE 120
 
@@ -31,37 +34,36 @@ void TimeStartup()
 	//WriteDebug(to_string(physicsFrameInTicks));
 };
 
-void FixedUpdate() 
+void FixedUpdate(GLFWwindow* window)
 {
-	
 	priorTick = currTick;
 	for (int i = 0; i < allTimers.size(); i++)
 	{
 		allTimers[i].TimerUpdate();
 	}
+	SaveInputs(window);
 
 	
 	//PhysicsUpdate();
 	EventManagerUpdate();
 }
 
-void VariableUpdate() 
+void VariableUpdate(GLFWwindow* window) 
 {
 	//RenderUpdate(window);
-	//SaveInputs(window);
-	//RunInputs();
+	RunInputs();
 	//UpdateMap();
 }
 
 
 //Updates game time based on the computer's clock and the current tick. 
 //Updates Rendering, Physics, Inputs, and map interactions.
-void UpdateTime(/*GLFWwindow* window*/)
+void UpdateTime(GLFWwindow* window)
 {
 	currTick = SDL_GetPerformanceCounter();
 	deltaTime = currTick - priorTick;
 	if (deltaTime >= physicsFrameInTicks)
-		FixedUpdate();
+		FixedUpdate(window);
 
-	VariableUpdate();
+	VariableUpdate(window);
 }

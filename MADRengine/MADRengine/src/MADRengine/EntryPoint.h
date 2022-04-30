@@ -1,3 +1,4 @@
+#pragma once
 #include "MADRengine/MADRpch.h"
 #include "TimeKeeping.h"
 #include "Events.h"

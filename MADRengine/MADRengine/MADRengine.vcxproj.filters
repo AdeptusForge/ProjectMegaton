@@ -36,6 +36,9 @@
     <ClInclude Include="src\MADRengine\Input.h">
       <Filter>MADRengine\Code</Filter>
     </ClInclude>
+    <ClInclude Include="src\MADRengine\Render.h">
+      <Filter>MADRengine\Code</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MADRengine\MADRpch.cpp">
@@ -60,6 +63,9 @@
       <Filter>MADRengine\Code</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\Input.cpp">
+      <Filter>MADRengine\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Render.cpp">
       <Filter>MADRengine\Code</Filter>
     </ClCompile>
   </ItemGroup>

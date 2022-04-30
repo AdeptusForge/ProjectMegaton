@@ -1,22 +1,32 @@
 #include "MADRengine/MADRpch.h"
 #include "EntryPoint.h"
-#include "SDL.h"
+#include "Input.h"
+#include "Collision.h"
+#include "Render.h"
 
-bool EngineStartup() 
+Collider c;
+GLFWwindow** window;
+
+bool EngineStartup()
 {
-	SDL_Init(SDL_INIT_VIDEO);
+	EventStartup();
+	window = RenderStartup();
+	InputControlStartup(window);
+	c.typeCriterion.push_back(EventType::Input_Event);
+	AddEventListener(&c);
 	return true;
 }
 
 bool EngineRunning() 
 {
-
 	return true;
 }
 void CentralLoop() 
 {
-	while (EngineRunning())
-	{
-		UpdateTime();
-	}
+	if(EngineStartup())
+		while (EngineRunning())
+		{
+			UpdateTime(*window);
+			RenderUpdate(*window);
+		}
 }

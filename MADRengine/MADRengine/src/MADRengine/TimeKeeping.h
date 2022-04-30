@@ -3,9 +3,10 @@
 #include "glfw3.h"
 #include "glm.hpp"
 
+
 void TimeStartup();
 int GetCurrentTick();
-void UpdateTime(/*GLFWwindow**/);
+void UpdateTime(GLFWwindow*);
 
 //unsigned int SecondsToFrames(float seconds);
 

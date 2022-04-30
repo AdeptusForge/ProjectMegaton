@@ -28,7 +28,6 @@ IncludeDir["stbi"] = "MADRengine/_thirdparty/includes/stbi/inc"
 IncludeDir["boost"] = "MADRengine/_thirdparty/includes/Boost/inc"
 IncludeDir["SDL"] = "MADRengine/_thirdparty/includes/SDL2"
 IncludeDir["KHR"] = "MADRengine/_thirdparty/includes/KHR"
-IncludeDir["LIBS"] = "MADRengine/_thirdparty/Libs"
 
 group "Dependencies"
 --[[
@@ -83,7 +82,7 @@ project "MADRengine"
 
     links
     {
-        "glfw3.lib",
+        "glfw3_mt.lib",
         "SDL2.lib",
         "SDL2main.lib"
     }

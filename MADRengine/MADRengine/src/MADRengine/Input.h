@@ -4,7 +4,6 @@
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
 #include "IDControl.h"
-#include "Events.h"
 
 const int MAX_SAVED_INPUTFRAMES = 20;
 
@@ -54,16 +53,18 @@ enum MouseMode
 
 //Essentially designed to handle specific inputs in sequenced input frames (think QCF and DP motions)
 //REFACTOR:: Input macro detection.
-class CommandInputMacro
+class GestaltInput
 {
 private:
 public:
 
-	CommandInputMacro() {};
+	GestaltInput() {};
 };
 
-void InputControlStartup();
-void SaveInputs();
+void InputControlStartup(GLFWwindow**);
+void SaveInputs(GLFWwindow*);
+InputFrame CollectInputs(GLFWwindow*);
+void RunInputs();
 void ChangeMappedInput();
 void BlockAllInputs();
 void UnblockAllInputs();

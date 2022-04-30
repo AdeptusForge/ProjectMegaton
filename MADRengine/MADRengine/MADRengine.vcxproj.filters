@@ -68,5 +68,8 @@
     <ClCompile Include="src\MADRengine\Render.cpp">
       <Filter>MADRengine\Code</Filter>
     </ClCompile>
+    <ClCompile Include="src\MADRengine\glad.c">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

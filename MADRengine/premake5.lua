@@ -42,7 +42,7 @@ project "MADRengine"
     kind "StaticLib"
     language "C++"
     cppdialect "C++17"
-    staticruntime "on"
+    staticruntime "off"
 
     targetdir ("_bin/" .. outputdir .. "/%{prj.name}")
     objdir ("_bin-int/" .. outputdir .. "/%{prj.name}")
@@ -54,7 +54,8 @@ project "MADRengine"
     {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.hpp",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
+        "%{prj.name}/src/**.c"
     }
     
     defines
@@ -166,7 +167,7 @@ project "MADRengine"
 project "ProjectMegaton"
     location "ProjectMegaton"
     kind "ConsoleApp"
-    staticruntime "on"
+    staticruntime "off"
 
     language "C++"
     cppdialect "C++17"

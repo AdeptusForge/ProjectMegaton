@@ -17,8 +17,8 @@ GLFWwindow** RenderStartup()
 			//glfwSetFramebufferSizeCallback(rWindow, framebuffer_size_callback);
 			//std::cout << "GLAD initialized successfully.\n";
 
-			//if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-				//std::cerr << "GLAD failed to initialize\n";
+			if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+				std::cerr << "GLAD failed to initialize\n";
 		}
 	}
 

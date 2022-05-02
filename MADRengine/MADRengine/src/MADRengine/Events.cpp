@@ -3,6 +3,8 @@
 EventSender globalEventManager;
 void EventManagerUpdate()
 {
+	
+	
 	globalEventManager.SendQueuedEvents();
 };
 void QueueEvent(EVENT e)

@@ -2,13 +2,10 @@
 #include "MADRpch.h"
 
 //Defines for the total id sizes for various ID controllers.
-#define TOTAL_RENDER_ID 16384
-#define TOTAL_INVENTORY_ID 512
-#define TOTAL_CAMERA_ID 32
-#define TOTAL_MAPENTITY_ID 32
-
-class MAAD_ID;
-
+#define TOTAL_COMPONENT_ID 16384
+//#define TOTAL_INVENTORY_ID 512
+//#define TOTAL_CAMERA_ID 32
+//#define TOTAL_MAPENTITY_ID 32
 
 //Class for storing, creating, deleting, finding, and recycling old id's
 class IDController
@@ -49,7 +46,7 @@ public:
 	private:
 		//ID
 		unsigned int id;
-		//Pointer to the object the ID is attached to
+		//Pointer to the code structure the ID is attached to
 		const void* ptr; 
 
 	public:

@@ -30,13 +30,19 @@
     <ClInclude Include="src\MADRengine\Collision.h">
       <Filter>MADRengine\Code</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\Object.h">
-      <Filter>MADRengine\Code</Filter>
-    </ClInclude>
     <ClInclude Include="src\MADRengine\Input.h">
       <Filter>MADRengine\Code</Filter>
     </ClInclude>
     <ClInclude Include="src\MADRengine\Render.h">
+      <Filter>MADRengine\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\LoadControl.h">
+      <Filter>MADRengine\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Components.h">
+      <Filter>MADRengine\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Entity.h">
       <Filter>MADRengine\Code</Filter>
     </ClInclude>
   </ItemGroup>
@@ -59,9 +65,6 @@
     <ClCompile Include="src\MADRengine\Collision.cpp">
       <Filter>MADRengine\Code</Filter>
     </ClCompile>
-    <ClCompile Include="src\MADRengine\Object.cpp">
-      <Filter>MADRengine\Code</Filter>
-    </ClCompile>
     <ClCompile Include="src\MADRengine\Input.cpp">
       <Filter>MADRengine\Code</Filter>
     </ClCompile>
@@ -70,6 +73,12 @@
     </ClCompile>
     <ClCompile Include="src\MADRengine\glad.c">
       <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Components.cpp">
+      <Filter>MADRengine\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Entity.cpp">
+      <Filter>MADRengine\Code</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

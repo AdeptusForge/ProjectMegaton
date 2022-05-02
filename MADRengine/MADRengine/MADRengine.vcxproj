@@ -144,24 +144,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\MADRengine\Collision.h" />
+    <ClInclude Include="src\MADRengine\Components.h" />
+    <ClInclude Include="src\MADRengine\Entity.h" />
     <ClInclude Include="src\MADRengine\EntryPoint.h" />
     <ClInclude Include="src\MADRengine\Events.h" />
     <ClInclude Include="src\MADRengine\IDControl.h" />
     <ClInclude Include="src\MADRengine\Input.h" />
+    <ClInclude Include="src\MADRengine\LoadControl.h" />
     <ClInclude Include="src\MADRengine\MADRpch.h" />
-    <ClInclude Include="src\MADRengine\Object.h" />
     <ClInclude Include="src\MADRengine\Render.h" />
     <ClInclude Include="src\MADRengine\Shader.h" />
     <ClInclude Include="src\MADRengine\TimeKeeping.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MADRengine\Collision.cpp" />
+    <ClCompile Include="src\MADRengine\Components.cpp" />
+    <ClCompile Include="src\MADRengine\Entity.cpp" />
     <ClCompile Include="src\MADRengine\EntryPoint.cpp" />
     <ClCompile Include="src\MADRengine\Events.cpp" />
     <ClCompile Include="src\MADRengine\IDControl.cpp" />
     <ClCompile Include="src\MADRengine\Input.cpp" />
     <ClCompile Include="src\MADRengine\MADRpch.cpp" />
-    <ClCompile Include="src\MADRengine\Object.cpp" />
     <ClCompile Include="src\MADRengine\Render.cpp" />
     <ClCompile Include="src\MADRengine\TimeKeeping.cpp" />
     <ClCompile Include="src\MADRengine\glad.c" />

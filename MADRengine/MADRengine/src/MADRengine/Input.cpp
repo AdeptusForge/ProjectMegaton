@@ -63,85 +63,92 @@ InputFrame CollectInputs(GLFWwindow* window) {
 
 	if (canInput)
 	{
+		if (glfwJoystickPresent(GLFW_JOYSTICK_1)) 
+		{
 
+		}
+		else 
+		{
 #pragma region Press
-		if (glfwGetKey(window, GLFW_KEY_W))
-		{
-			dirs.w = true;
-		}
-		if (glfwGetKey(window, GLFW_KEY_D))
-		{
-			dirs.x = true;
-		}
-		if (glfwGetKey(window, GLFW_KEY_S))
-		{
-			dirs.y = true;
-		}
-		if (glfwGetKey(window, GLFW_KEY_A))
-		{
-			dirs.z = true;
-		}
-		if (glfwGetKey(window, GLFW_KEY_U))
-		{
-			buttons.w = true;
-		}
-		if (glfwGetKey(window, GLFW_KEY_I))
-		{
-			buttons.x = true;
-		}
-		if (glfwGetKey(window, GLFW_KEY_O))
-		{
-			buttons.y = true;
-		}
-		if (glfwGetKey(window, GLFW_KEY_P))
-		{
-			buttons.z = true;
-		}
-		if (glfwGetKey(window, GLFW_KEY_ESCAPE))
-		{
-			buttons2.x = true;
-		}
+			if (glfwGetKey(window, GLFW_KEY_W))
+			{
+				dirs.w = true;
+			}
+			if (glfwGetKey(window, GLFW_KEY_D))
+			{
+				dirs.x = true;
+			}
+			if (glfwGetKey(window, GLFW_KEY_S))
+			{
+				dirs.y = true;
+			}
+			if (glfwGetKey(window, GLFW_KEY_A))
+			{
+				dirs.z = true;
+			}
+			if (glfwGetKey(window, GLFW_KEY_U))
+			{
+				buttons.w = true;
+			}
+			if (glfwGetKey(window, GLFW_KEY_I))
+			{
+				buttons.x = true;
+			}
+			if (glfwGetKey(window, GLFW_KEY_O))
+			{
+				buttons.y = true;
+			}
+			if (glfwGetKey(window, GLFW_KEY_P))
+			{
+				buttons.z = true;
+			}
+			if (glfwGetKey(window, GLFW_KEY_ESCAPE))
+			{
+				buttons2.x = true;
+			}
 #pragma endregion
 
 #pragma region Release
-		if (glfwGetKey(window, GLFW_KEY_W) == 0)
-		{
-			dirs.w = false;
-		}
-		if (glfwGetKey(window, GLFW_KEY_D) == 0)
-		{
-			dirs.x = false;
-		}
-		if (glfwGetKey(window, GLFW_KEY_S) == 0)
-		{
-			dirs.y = false;
-		}
-		if (glfwGetKey(window, GLFW_KEY_A) == 0)
-		{
-			dirs.z = false;
+			if (glfwGetKey(window, GLFW_KEY_W) == 0)
+			{
+				dirs.w = false;
+			}
+			if (glfwGetKey(window, GLFW_KEY_D) == 0)
+			{
+				dirs.x = false;
+			}
+			if (glfwGetKey(window, GLFW_KEY_S) == 0)
+			{
+				dirs.y = false;
+			}
+			if (glfwGetKey(window, GLFW_KEY_A) == 0)
+			{
+				dirs.z = false;
+			}
+
+			if (glfwGetKey(window, GLFW_KEY_U) == 0)
+			{
+				buttons.w = false;
+			}
+			if (glfwGetKey(window, GLFW_KEY_I) == 0)
+			{
+				buttons.x = false;
+			}
+			if (glfwGetKey(window, GLFW_KEY_O) == 0)
+			{
+				buttons.y = false;
+			}
+			if (glfwGetKey(window, GLFW_KEY_P) == 0)
+			{
+				buttons.z = false;
+			}
+			if (glfwGetKey(window, GLFW_KEY_ESCAPE) == 0)
+			{
+				buttons2.x = false;
+			}
+#pragma endregion
 		}
 
-		if (glfwGetKey(window, GLFW_KEY_U) == 0)
-		{
-			buttons.w = false;
-		}
-		if (glfwGetKey(window, GLFW_KEY_I) == 0)
-		{
-			buttons.x = false;
-		}
-		if (glfwGetKey(window, GLFW_KEY_O) == 0)
-		{
-			buttons.y = false;
-		}
-		if (glfwGetKey(window, GLFW_KEY_P) == 0)
-		{
-			buttons.z = false;
-		}
-		if (glfwGetKey(window, GLFW_KEY_ESCAPE) == 0)
-		{
-			buttons2.x = false;
-		}
-#pragma endregion
 		newFrame = InputFrame(dirs, buttons, buttons2);
 		return newFrame;
 	}

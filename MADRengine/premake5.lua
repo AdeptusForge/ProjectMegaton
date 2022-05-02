@@ -119,6 +119,7 @@ project "MADRengine"
         }
         runtime "Debug"
         symbols "on"
+        
 
     filter "configurations:Release"
         defines

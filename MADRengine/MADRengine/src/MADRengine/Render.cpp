@@ -1,6 +1,7 @@
 
 #include "Render.h"
 GLFWwindow* rWindow;
+#define Background_Color 0.2f, 0.3f, 0.3f, 1.0f
 
 GLFWwindow** RenderStartup()
 {
@@ -14,8 +15,7 @@ GLFWwindow** RenderStartup()
 
 
 			glfwMakeContextCurrent(rWindow);
-			//glfwSetFramebufferSizeCallback(rWindow, framebuffer_size_callback);
-			//std::cout << "GLAD initialized successfully.\n";
+
 
 			if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 				std::cerr << "GLAD failed to initialize\n";
@@ -27,7 +27,14 @@ GLFWwindow** RenderStartup()
 
 void RenderUpdate(GLFWwindow* window)
 {
-	//glfwSwapBuffers(rWindow);
-	//glFlush();
+
+
+	glClearColor(Background_Color);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+
+
+	glfwSwapBuffers(rWindow);
+	glFlush();
 	glfwPollEvents();
 }

@@ -4,81 +4,85 @@
     <Filter Include="MADRengine">
       <UniqueIdentifier>{3F10B25D-2BC8-F3AA-94CF-CC0680A68E9B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MADRengine\Code">
-      <UniqueIdentifier>{b13aab7a-0f1f-4ec3-8aaa-99992d1370c6}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\MADRengine\Collision.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Components.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\ECS.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\EntryPoint.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Events.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\IDControl.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Input.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\LoadControl.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
     <ClInclude Include="src\MADRengine\MADRpch.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\TimeKeeping.h">
-      <Filter>MADRengine\Code</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\EntryPoint.h">
-      <Filter>MADRengine\Code</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\Events.h">
-      <Filter>MADRengine\Code</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\IDControl.h">
-      <Filter>MADRengine\Code</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\Shader.h">
-      <Filter>MADRengine\Code</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\Collision.h">
-      <Filter>MADRengine\Code</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\Input.h">
-      <Filter>MADRengine\Code</Filter>
+    <ClInclude Include="src\MADRengine\Object.h">
+      <Filter>MADRengine</Filter>
     </ClInclude>
     <ClInclude Include="src\MADRengine\Render.h">
-      <Filter>MADRengine\Code</Filter>
+      <Filter>MADRengine</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\LoadControl.h">
-      <Filter>MADRengine\Code</Filter>
+    <ClInclude Include="src\MADRengine\Shader.h">
+      <Filter>MADRengine</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\Components.h">
-      <Filter>MADRengine\Code</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\Entity.h">
-      <Filter>MADRengine\Code</Filter>
+    <ClInclude Include="src\MADRengine\TimeKeeping.h">
+      <Filter>MADRengine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\MADRengine\Collision.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Components.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\ECS.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\EntryPoint.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Events.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\IDControl.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Input.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
     <ClCompile Include="src\MADRengine\MADRpch.cpp">
       <Filter>MADRengine</Filter>
     </ClCompile>
-    <ClCompile Include="src\MADRengine\TimeKeeping.cpp">
-      <Filter>MADRengine\Code</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\EntryPoint.cpp">
-      <Filter>MADRengine\Code</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\Events.cpp">
-      <Filter>MADRengine\Code</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\IDControl.cpp">
-      <Filter>MADRengine\Code</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\Collision.cpp">
-      <Filter>MADRengine\Code</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\Input.cpp">
-      <Filter>MADRengine\Code</Filter>
+    <ClCompile Include="src\MADRengine\Object.cpp">
+      <Filter>MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\Render.cpp">
-      <Filter>MADRengine\Code</Filter>
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\TimeKeeping.cpp">
+      <Filter>MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\glad.c">
       <Filter>MADRengine</Filter>
     </ClCompile>
-    <ClCompile Include="src\MADRengine\Components.cpp">
-      <Filter>MADRengine\Code</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\Entity.cpp">
-      <Filter>MADRengine\Code</Filter>
-    </ClCompile>
+    <ClCompile Include="src\glad.c" />
   </ItemGroup>
 </Project>

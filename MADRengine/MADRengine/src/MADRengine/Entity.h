@@ -49,7 +49,7 @@ void DeleteComponent(Component*);
 
 namespace Transform {
 
-	class TransformComponent : public Component
+	class Transform : public Component
 	{
 	private:
 		glm::ivec3 worldPosition;
@@ -58,3 +58,26 @@ namespace Transform {
 		//glm::vec3 GetLocalPosition() {return FixedPointArith::ConvertFromIntVec()};
 	};
 } //End of Transform Namespace
+
+namespace Collision 
+{
+	class Collier_2D {};
+	struct CollisionData_2D 
+	{
+		Collier_2D* target;
+	};
+
+
+	class Collider_2D : public Component
+	{
+	private:
+		int layer;
+		glm::ivec3 localPosition;
+		glm::ivec2 collDimensions;
+		std::vector<int> mask;
+	public:
+		bool IsColliding() { return false; }
+	};
+
+
+}

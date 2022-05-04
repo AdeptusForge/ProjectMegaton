@@ -60,3 +60,13 @@ namespace Colliders
 		bool IsColliding() { return false; }
 	};
 }
+
+namespace Render_2D
+{
+
+}
+
+namespace Render_3D
+{
+
+}

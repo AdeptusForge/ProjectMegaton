@@ -153,6 +153,7 @@
     <ClInclude Include="src\MADRengine\LoadControl.h" />
     <ClInclude Include="src\MADRengine\MADRpch.h" />
     <ClInclude Include="src\MADRengine\Object.h" />
+    <ClInclude Include="src\MADRengine\Physics.h" />
     <ClInclude Include="src\MADRengine\Render.h" />
     <ClInclude Include="src\MADRengine\Shader.h" />
     <ClInclude Include="src\MADRengine\TimeKeeping.h" />
@@ -167,6 +168,7 @@
     <ClCompile Include="src\MADRengine\Input.cpp" />
     <ClCompile Include="src\MADRengine\MADRpch.cpp" />
     <ClCompile Include="src\MADRengine\Object.cpp" />
+    <ClCompile Include="src\MADRengine\Physics.cpp" />
     <ClCompile Include="src\MADRengine\Render.cpp" />
     <ClCompile Include="src\MADRengine\TimeKeeping.cpp" />
     <ClCompile Include="src\MADRengine\glad.c" />

@@ -45,6 +45,9 @@
     <ClInclude Include="src\MADRengine\TimeKeeping.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
+    <ClInclude Include="src\MADRengine\Physics.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MADRengine\Collision.cpp">
@@ -84,5 +87,8 @@
       <Filter>MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\MADRengine\Physics.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

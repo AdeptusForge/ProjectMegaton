@@ -28,5 +28,24 @@ private:
 	glm::ivec3 worldPosition;
 public:
 	glm::vec3 GetWorldPosition() { return FixedPointArith::ConvertFromIntVec(worldPosition); }
-	glm::vec3 GetLocalPosition(glm::ivec3 relativeTo) { return FixedPointArith::ConvertFromIntVec(relativeTo - worldPosition); }
+	glm::vec3 GetLocalPosition(glm::ivec3 relativeTo) 
+	{
+		glm::ivec3 temp;
+		if (relativeTo.x > worldPosition.x)
+			temp.x = relativeTo.x - worldPosition.x;
+		else
+			temp.x = worldPosition.x - relativeTo.x;
+
+		if (relativeTo.y > worldPosition.y)
+			temp.y = relativeTo.y - worldPosition.y;
+		else
+			temp.y = worldPosition.y - relativeTo.y;
+
+		if (relativeTo.z > worldPosition.z)
+			temp.z = relativeTo.z - worldPosition.z;
+		else
+			temp.z = worldPosition.z - relativeTo.z;
+
+		return FixedPointArith::ConvertFromIntVec(temp); 
+	}
 };

@@ -1,94 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="MADRengine">
-      <UniqueIdentifier>{3F10B25D-2BC8-F3AA-94CF-CC0680A68E9B}</UniqueIdentifier>
+    <Filter Include="_thirdparty">
+      <UniqueIdentifier>{0FD1FDAF-7B86-76A5-047B-707C702F6DA9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_thirdparty\includes">
+      <UniqueIdentifier>{3588E925-2117-73EF-CA35-87EAB6A38395}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_thirdparty\includes\samples">
+      <UniqueIdentifier>{79646C17-651F-5CC3-0ED7-D40DFA70A653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_thirdparty\includes\samples\SoundEngine">
+      <UniqueIdentifier>{C7543DB3-B3D1-30F6-DC4E-310AC82ACD89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_thirdparty\includes\samples\SoundEngine\Common">
+      <UniqueIdentifier>{1F5CF413-8B97-54D7-948C-D1660047D907}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MADRengine">
+      <UniqueIdentifier>{F6ACB894-E27A-AC9A-CB0E-1DC1B77B88FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MADRengine\Framework">
+      <UniqueIdentifier>{F3545849-DF79-A7C9-08C5-8C59F448A6E7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\MADRengine\Collision.h">
-      <Filter>MADRengine</Filter>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultIOHookBlocking.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\Components.h">
-      <Filter>MADRengine</Filter>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultIOHookDeferred.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\ECS.h">
-      <Filter>MADRengine</Filter>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultLowLevelIODispatcher.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\EntryPoint.h">
-      <Filter>MADRengine</Filter>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFileHelpers.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\Events.h">
-      <Filter>MADRengine</Filter>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFileHelpersBase.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\IDControl.h">
-      <Filter>MADRengine</Filter>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFileLocationBase.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\Input.h">
-      <Filter>MADRengine</Filter>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackage.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\LoadControl.h">
-      <Filter>MADRengine</Filter>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLUT.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLowLevelIO.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLowLevelIOBlocking.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLowLevelIODeferred.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkMultipleFileLocation.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\stdafx.h">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClInclude>
     <ClInclude Include="src\MADRengine\MADRpch.h">
-      <Filter>MADRengine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\Object.h">
-      <Filter>MADRengine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\Render.h">
-      <Filter>MADRengine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\Shader.h">
-      <Filter>MADRengine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\TimeKeeping.h">
-      <Filter>MADRengine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\Physics.h">
-      <Filter>MADRengine</Filter>
+      <Filter>src\MADRengine\Framework</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\MADRengine\Collision.cpp">
-      <Filter>MADRengine</Filter>
+    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultIOHookBlocking.cpp">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClCompile>
-    <ClCompile Include="src\MADRengine\Components.cpp">
-      <Filter>MADRengine</Filter>
+    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultIOHookDeferred.cpp">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClCompile>
-    <ClCompile Include="src\MADRengine\ECS.cpp">
-      <Filter>MADRengine</Filter>
+    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultLowLevelIODispatcher.cpp">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkFileLocationBase.cpp">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackage.cpp">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLUT.cpp">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkMultipleFileLocation.cpp">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\stdafx.cpp">
+      <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\EntryPoint.cpp">
-      <Filter>MADRengine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\Events.cpp">
-      <Filter>MADRengine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\IDControl.cpp">
-      <Filter>MADRengine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\Input.cpp">
-      <Filter>MADRengine</Filter>
+      <Filter>src\MADRengine\Framework</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\MADRpch.cpp">
-      <Filter>MADRengine</Filter>
+      <Filter>src\MADRengine\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="src\MADRengine\Object.cpp">
-      <Filter>MADRengine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\Render.cpp">
-      <Filter>MADRengine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\TimeKeeping.cpp">
-      <Filter>MADRengine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MADRengine\glad.c">
-      <Filter>MADRengine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\glad.c" />
-    <ClCompile Include="src\MADRengine\Physics.cpp">
-      <Filter>MADRengine</Filter>
+    <ClCompile Include="src\glad.c">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

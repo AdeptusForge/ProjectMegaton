@@ -179,10 +179,6 @@ namespace detail
 	// -- Explicit basic constructors --
 
 	template <typename T, precision P>
-	GLM_FUNC_QUALIFIER GLM_CONSTEXPR_SIMD tvec4<T, P>::tvec4(ctor)
-	{}
-
-	template <typename T, precision P>
 	GLM_FUNC_QUALIFIER GLM_CONSTEXPR_SIMD tvec4<T, P>::tvec4(T scalar)
 		: x(scalar), y(scalar), z(scalar), w(scalar)
 	{}

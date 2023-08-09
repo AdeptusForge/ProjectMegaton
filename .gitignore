@@ -1,5 +1,8 @@
 git-private-key.ppk
 git-public-key
+MADRengine/_bin
+MADRengine/_bin-int
+MADRengine/MADRengine/_thirdparty/libs
 MADRengine/.vs/ProjectMegaton/v16/Browse.VC.db
 MADRengine/.vs/ProjectMegaton/v16/Browse.VC.db-shm
 MADRengine/.vs/ProjectMegaton/v16/Browse.VC.db-wal
@@ -26,3 +29,4 @@ MADRengine/_bin-int/Debug-windows-x86_64/ProjectMegaton/ProjectMegaton.tlog/link
 MADRengine/_bin-int/Debug-windows-x86_64/ProjectMegaton/ProjectMegaton.tlog/ProjectMegaton.lastbuildstate
 MADRengine/.vs/ProjectMegaton/v16/ipch/985b98b5aeeb21bd.ipch
 *.ipch
+*.vs

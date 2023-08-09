@@ -10,6 +10,17 @@ workspace "ProjectMegaton"
         "Release",
         "Distribute"
     }
+	
+	vpaths { 
+        ["src/MADRengine/Framework"] = { "**Assets.**", "**MADRpch.**","**TimeKeeping.**","Scene.**", "**Error.**", "**EntryPoint.**", "**Input.**", "**BehaviorTree.**", "**Serialization.**", "**SoundMananger.**", "**Settings.**"},
+        ["src/MADRengine/Framework/EventSystem"] = {"**Event.**", "**EventListener.**", "**EventSender.**"},
+        ["src/MADRengine/Framework/Rendering"] = {"**Render.**",  "**Texture.**",  "**Shader.**","**Palette.**"},
+        ["src/MADRengine/Framework/ECS"] = {"**ECS.**"},
+        ["src/MADRengine/Framework/ECS/Components"] = {"**ECS.**", "**Transform.**", "**Physics.**", "**RenderModel.**", "**Text.**", "**Camera.**", "**Animator.**", "**Collision.**", "**Particles.**", "**BehaviorTree.**"},
+        ["src/MADRengine/Framework/UI"] = {"**UI.**","**UIManager.**","**Button.**","**Meter.**", "**PauseMenu.**", "**QuitConfirm.**"},
+        ["src/MADRengine/Framework/Editor"] = {"**Editor.**", "**EntityEditor.**", "**AnimationEditor.**","**AssetWindow.**","**HeirarchyWindow.**","**DebugWindow.**","**ParticleEditor.**", "**Profiler.**", "**PhysicsEditor.**", "**PaletteEditor.**", "**WwiseWindow.**"},
+        ["src/GAME/Scenes"] = {"**GameScene.**"}
+	}
 
     startproject "ProjectMegaton"
 
@@ -18,30 +29,35 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "MADRengine/_thirdparty/includes/GLFW"
 IncludeDir["Glad"] = "MADRengine/_thirdparty/includes/glad"
 IncludeDir["ImGui"] = "MADRengine/_thirdparty/includes/imgui-master"
+IncludeDir["ImGuizmo"] = "MADRengine/_thirdparty/includes/ImGuizmo-master"
 IncludeDir["glm"] = "MADRengine/_thirdparty/includes/glm"
+IncludeDir["rapid_json"] = "MADRengine/_thirdparty/includes/rapidjson"
 IncludeDir["nlohmann"] = "MADRengine/_thirdparty/includes/nlohmann"
 IncludeDir["magicenum"] = "MADRengine/_thirdparty/includes/magic_enum/include"
 IncludeDir["fmod"] = "MADRengine/_thirdparty/includes/fmod/inc"
-IncludeDir["freetype"] = "MADRengine/_thirdparty/includes/freetype/inc"
-IncludeDir["rttr"] = "MADRengine/_thirdparty/includes/RTTR/include"
-IncludeDir["stbi"] = "MADRengine/_thirdparty/includes/stbi/inc"
+IncludeDir["freetype"] = "MADRengine/_thirdparty/includes/include"
+IncludeDir["rttr"] = "MADRengine/_thirdparty/includes/RTTR"
+IncludeDir["stbi"] = "MADRengine/_thirdparty/includes/stb-master"
 IncludeDir["boost"] = "MADRengine/_thirdparty/includes/Boost/inc"
-IncludeDir["SDL"] = "MADRengine/_thirdparty/includes/SDL2"
 IncludeDir["KHR"] = "MADRengine/_thirdparty/includes/KHR"
+IncludeDir["AK"] = "MADRengine/_thirdparty/includes/AK"
+IncludeDir["AKSample"] = "MADRengine/_thirdparty/includes/samples/SoundEngine/Common"
+IncludeDir["Steam"] = "MADRengine/_thirdparty/includes/steam"
 
 group "Dependencies"
+  include "MADRengine/_thirdparty/includes/imgui-master"
 --[[
     include "MADRengine/_thirdparty/GLFW"
-    include "MADRengine/_thirdparty/Glad"
-    include "MADRengine/_thirdparty/imgui"
+    include "MADRengine/_thirdparty/Glad" 
     ]]
+-----------------------------------------------------
 group ""
 
 project "MADRengine"
     location "MADRengine"
     kind "StaticLib"
     language "C++"
-    cppdialect "C++17"
+    cppdialect "C++20"
     staticruntime "off"
 
     targetdir ("_bin/" .. outputdir .. "/%{prj.name}")
@@ -55,37 +71,56 @@ project "MADRengine"
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.hpp",
         "%{prj.name}/src/**.cpp",
-        "%{prj.name}/src/**.c"
+        "%{prj.name}/src/**.c",
+		"MADRengine/_thirdparty/includes/samples/SoundEngine/Common/**.cpp",
+		"MADRengine/_thirdparty/includes/samples/SoundEngine/Common/**.h",
+		"MADRengine/_thirdparty/includes/boost/**.hpp"
     }
     
     defines
     {
-        "_CRT_SECURE_NO_WARNINGS"
+        "_CRT_SECURE_NO_WARNINGS",
+        "_EDITOR",
+		"_WINDOWS",
+		"WIN32"
     }
 
     includedirs
     {
-        "%{prj.name}/src",
+        "%{prj.name}/src/MADRengine",
         "%{prj.name}/_thirdparty/includes/spdlog/include",
+		    "MADRengine/_thirdparty/includes/",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
         "%{IncludeDir.ImGui}",
+        "%{IncludeDir.ImGuizmo}",
         "%{IncludeDir.glm}",
+        "%{IncludeDir.rapid_json}",
         "%{IncludeDir.nlohmann}",
         "%{IncludeDir.magicenum}",
         "%{IncludeDir.freetype}",
         "%{IncludeDir.rttr}",
         "%{IncludeDir.stbi}",
         "%{IncludeDir.boost}",
-        "%{IncludeDir.SDL}",
-        "%{IncludeDir.KHR}"
+        "%{IncludeDir.KHR}",
+        "%{IncludeDir.AK}",
+        "%{IncludeDir.AKSample}"
     }
 
     links
     {
         "glfw3_mt.lib",
-        "SDL2.lib",
-        "SDL2main.lib"
+		"Shlwapi.lib",
+        "MADRengine/_thirdparty/libs/Debug/lib/AkSoundEngine.lib",
+        "MADRengine/_thirdparty/libs/Debug/lib/AkMemoryMgr.lib",
+        "MADRengine/_thirdparty/libs/Debug/lib/AkStreamMgr.lib",
+        "MADRengine/_thirdparty/libs/Debug/lib/AkMusicEngine.lib",
+        "MADRengine/_thirdparty/libs/Debug/lib/AkSpatialAudio.lib",
+        "MADRengine/_thirdparty/libs/Debug/lib/AkAudioInputSource.lib",
+        "ImGui",
+		"Winmm.lib",
+		"ws2_32.lib",
+		"MADRengine/_thirdparty/libs/steam/steam_api64.lib"
     }
 
     flags
@@ -114,8 +149,9 @@ project "MADRengine"
         links
         {
             --"MADRengine/_thirdparty/fmod/lib/x64/fmodL_vc.lib",
-            --"MADRengine/_thirdparty/freetype/lib/freetype_debug.lib",
             --"MADRengine/_thirdparty/RTTR/lib/debug/librttr_core_d.lib"
+            "MADRengine/_thirdparty/freetype/lib/freetype_debug.lib",
+            "MADRengine/_thirdparty/libs/Debug/lib/CommunicationCentral.lib"
         }
         runtime "Debug"
         symbols "on"
@@ -133,8 +169,8 @@ project "MADRengine"
         links
         {
             --"MADRengine/_thirdparty/fmod/lib/x64/fmod_vc.lib",
-            --"MADRengine/_thirdparty/freetype/lib/freetype.lib",
             --"MADRengine/_thirdparty/RTTR/lib/relwithdebug/librttr_core.lib"
+            "MADRengine/_thirdparty/freetype/lib/freetype_debug.lib"
         }
         runtime "Release"
         optimize "speed"
@@ -144,41 +180,21 @@ project "MADRengine"
             "/Ot"
         }
 
-    filter "configurations:Distribute"
-        defines
-        {
-            "MADR_DIST",
-            "NDEBUG"
-        }
-
-        links
-        {
-            --"MADRengine/_thirdparty/fmod/lib/x64/fmod_vc.lib",
-            --"MADRengine/_thirdparty/freetype/lib/freetype.lib",
-            --"MADRengine/_thirdparty/RTTR/lib/release/librttr_core.lib"
-        }
-        runtime "Release"
-        optimize "speed"
-
-        buildoptions
-        {
-            "/Ot"
-        }
-
-project "ProjectMegaton"
-    location "ProjectMegaton"
+project "GAME"
+	targetname "ProjectMegaton"
+    location "GAME"
     kind "ConsoleApp"
     staticruntime "off"
 
     language "C++"
-    cppdialect "C++17"
+    cppdialect "C++20"
 
     debugdir ("_bin/" .. outputdir .. "/%{prj.name}")
     targetdir ("_bin/" .. outputdir .. "/%{prj.name}")
     objdir ("_bin-int/" .. outputdir .. "/%{prj.name}")
 
     pchheader "pmpch.h"
-    pchsource "ProjectMegaton/src/pmpch.cpp"
+    pchsource "GAME/src/pmpch.cpp"
 
     files
     {
@@ -194,17 +210,17 @@ project "ProjectMegaton"
         "MADRengine/_thirdparty/spdlog/include",
         "MADRengine/_thirdparty/",
         "%{IncludeDir.ImGui}",
+        "%{IncludeDir.ImGuizmo}",
         "%{IncludeDir.glm}",
         "%{IncludeDir.json}",
         "%{IncludeDir.magicenum}",
-        "%{IncludeDir.freetype}",
         "%{IncludeDir.rttr}",
-		    "%{IncludeDir.stbi}",
-        "%{IncludeDir.SDL}",
+		"%{IncludeDir.stbi}",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.KHR}"
-        
+        "%{IncludeDir.KHR}",
+		"%{IncludeDir.AK}",
+		"%{IncludeDir.AKSample}"
     }
 
     links
@@ -221,7 +237,10 @@ project "ProjectMegaton"
 
     postbuildcommands
     {
-        --"robocopy \"../assets\" \"../_bin/" .. outputdir .. "/%{prj.name}/assets\" /mir"
+        "robocopy \"../Assets/\" \"../_bin/" .. outputdir .. "/%{prj.name}/Assets/\" /mir",
+		"xcopy /Y \"$(SolutionDir)steam_api64.dll\" \"$(targetdir)\"",
+		"xcopy /Y \"$(SolutionDir)steam_appid.txt\" \"$(targetdir)\"",
+		"xcopy /Y \"$(SolutionDir)freetype.dll\" \"$(targetdir)\""
     }
 
     filter "system:windows"
@@ -246,6 +265,7 @@ project "ProjectMegaton"
         }
         runtime "Debug"
         symbols "on"
+		
 
     filter "configurations:Release"
         postbuildcommands
@@ -256,26 +276,6 @@ project "ProjectMegaton"
         defines
         {
             "MADR_RELEASE",
-            "NDEBUG",
-            "_CONSOLE"
-        }
-        runtime "Release"
-        optimize "speed"
-
-        buildoptions
-        {
-            "/Ot"
-        }
-
-    filter "configurations:Distribute"
-        postbuildcommands
-        {
-            --"robocopy \"../MADRengine/_thirdparty/fmod/lib/x64/\" \"../_bin/" .. outputdir .. "/%{prj.name}\" fmod.dll"
-        }
-
-        defines
-        {
-            "MADR_DIST",
             "NDEBUG"
         }
         runtime "Release"

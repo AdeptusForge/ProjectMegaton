@@ -66,8 +66,14 @@
     <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\stdafx.h">
       <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClInclude>
+    <ClInclude Include="src\MADRengine\EntryPoint.h">
+      <Filter>src\MADRengine\Framework</Filter>
+    </ClInclude>
     <ClInclude Include="src\MADRengine\MADRpch.h">
       <Filter>src\MADRengine\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Trace.h">
+      <Filter>src\MADRengine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +106,12 @@
     </ClCompile>
     <ClCompile Include="src\MADRengine\MADRpch.cpp">
       <Filter>src\MADRengine\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\TimeKeeping.cpp">
+      <Filter>src\MADRengine\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Trace.cpp">
+      <Filter>src\MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\glad.c">
       <Filter>src</Filter>

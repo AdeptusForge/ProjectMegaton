@@ -18,8 +18,7 @@ workspace "ProjectMegaton"
         ["src/MADRengine/Framework/ECS"] = {"**ECS.**"},
         ["src/MADRengine/Framework/ECS/Components"] = {"**ECS.**", "**Transform.**", "**Physics.**", "**RenderModel.**", "**Text.**", "**Camera.**", "**Animator.**", "**Collision.**", "**Particles.**", "**BehaviorTree.**"},
         ["src/MADRengine/Framework/UI"] = {"**UI.**","**UIManager.**","**Button.**","**Meter.**", "**PauseMenu.**", "**QuitConfirm.**"},
-        ["src/MADRengine/Framework/Editor"] = {"**Editor.**", "**EntityEditor.**", "**AnimationEditor.**","**AssetWindow.**","**HeirarchyWindow.**","**DebugWindow.**","**ParticleEditor.**", "**Profiler.**", "**PhysicsEditor.**", "**PaletteEditor.**", "**WwiseWindow.**"},
-        ["src/GAME/Scenes"] = {"**GameScene.**"}
+        ["src/MADRengine/Framework/Editor"] = {"**Editor.**", "**EntityEditor.**", "**AnimationEditor.**","**AssetWindow.**","**HeirarchyWindow.**","**DebugWindow.**","**ParticleEditor.**", "**Profiler.**", "**PhysicsEditor.**", "**PaletteEditor.**", "**WwiseWindow.**"}
 	}
 
     startproject "ProjectMegaton"
@@ -32,6 +31,7 @@ IncludeDir["ImGui"] = "MADRengine/_thirdparty/includes/imgui-master"
 IncludeDir["ImGuizmo"] = "MADRengine/_thirdparty/includes/ImGuizmo-master"
 IncludeDir["glm"] = "MADRengine/_thirdparty/includes/glm"
 IncludeDir["rapid_json"] = "MADRengine/_thirdparty/includes/rapidjson"
+IncludeDir["SPDLog"] = "MADRengine/_thirdparty/includes/spdlog"
 IncludeDir["nlohmann"] = "MADRengine/_thirdparty/includes/nlohmann"
 IncludeDir["magicenum"] = "MADRengine/_thirdparty/includes/magic_enum/include"
 IncludeDir["fmod"] = "MADRengine/_thirdparty/includes/fmod/inc"
@@ -57,7 +57,7 @@ project "MADRengine"
     location "MADRengine"
     kind "StaticLib"
     language "C++"
-    cppdialect "C++20"
+    cppdialect "C++17"
     staticruntime "off"
 
     targetdir ("_bin/" .. outputdir .. "/%{prj.name}")
@@ -87,9 +87,9 @@ project "MADRengine"
 
     includedirs
     {
-        "%{prj.name}/src/MADRengine",
-        "%{prj.name}/_thirdparty/includes/spdlog/include",
-		    "MADRengine/_thirdparty/includes/",
+        "%{prj.name}/src",
+        "MADRengine/_thirdparty/includes",
+        "%{IncludeDir.SPDLog}",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
         "%{IncludeDir.ImGui}",
@@ -207,8 +207,8 @@ project "GAME"
     {
         "%{prj.name}/src",
         "MADRengine/src",
-        "MADRengine/_thirdparty/spdlog/include",
-        "MADRengine/_thirdparty/",
+        "MADRengine/_thirdparty/includes",
+        "%{IncludeDir.SPDLog}",
         "%{IncludeDir.ImGui}",
         "%{IncludeDir.ImGuizmo}",
         "%{IncludeDir.glm}",

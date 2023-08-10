@@ -69,7 +69,13 @@
     <ClInclude Include="src\MADRengine\EntryPoint.h">
       <Filter>src\MADRengine\Framework</Filter>
     </ClInclude>
+    <ClInclude Include="src\MADRengine\Events.h">
+      <Filter>src\MADRengine</Filter>
+    </ClInclude>
     <ClInclude Include="src\MADRengine\MADRpch.h">
+      <Filter>src\MADRengine\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Settings.h">
       <Filter>src\MADRengine\Framework</Filter>
     </ClInclude>
     <ClInclude Include="src\MADRengine\Trace.h">
@@ -104,7 +110,13 @@
     <ClCompile Include="src\MADRengine\EntryPoint.cpp">
       <Filter>src\MADRengine\Framework</Filter>
     </ClCompile>
+    <ClCompile Include="src\MADRengine\Events.cpp">
+      <Filter>src\MADRengine</Filter>
+    </ClCompile>
     <ClCompile Include="src\MADRengine\MADRpch.cpp">
+      <Filter>src\MADRengine\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Settings.cpp">
       <Filter>src\MADRengine\Framework</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\TimeKeeping.cpp">

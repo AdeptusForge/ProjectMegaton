@@ -87,7 +87,7 @@ project "MADRengine"
 
     includedirs
     {
-        "%{prj.name}/src",
+        "%{prj.name}/src/MADRengine",
         "MADRengine/_thirdparty/includes",
         "%{IncludeDir.SPDLog}",
         "%{IncludeDir.GLFW}",

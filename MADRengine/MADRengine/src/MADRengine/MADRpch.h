@@ -17,3 +17,7 @@
 #include <algorithm>
 #include <iterator>
 #include <deque>
+
+#define KILOBYTE 1024
+#define MEGABYTE 1048576
+#define GIGABYTE 1073741824

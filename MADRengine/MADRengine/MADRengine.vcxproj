@@ -75,7 +75,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_EDITOR;_WINDOWS;WIN32;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MADR_ENABLE_ASSERTS;MADR_DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_EDITOR;_WINDOWS;WIN32;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;CONSOLE_LOG;MADR_ENABLE_ASSERTS;MADR_DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src\MADRengine;_thirdparty\includes;_thirdparty\includes\spdlog;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\ImGuizmo-master;_thirdparty\includes\glm;_thirdparty\includes\rapidjson;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\include;_thirdparty\includes\RTTR;_thirdparty\includes\stb-master;_thirdparty\includes\Boost\inc;_thirdparty\includes\KHR;_thirdparty\includes\AK;_thirdparty\includes\samples\SoundEngine\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -97,7 +97,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_EDITOR;_WINDOWS;WIN32;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MADR_ENABLE_ASSERTS;MADR_RELEASE;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CONSOLE_LOG;_CRT_SECURE_NO_WARNINGS;_EDITOR;_WINDOWS;WIN32;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MADR_ENABLE_ASSERTS;MADR_RELEASE;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src\MADRengine;_thirdparty\includes;_thirdparty\includes\spdlog;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\ImGuizmo-master;_thirdparty\includes\glm;_thirdparty\includes\rapidjson;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\include;_thirdparty\includes\RTTR;_thirdparty\includes\stb-master;_thirdparty\includes\Boost\inc;_thirdparty\includes\KHR;_thirdparty\includes\AK;_thirdparty\includes\samples\SoundEngine\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -123,7 +123,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_EDITOR;_WINDOWS;WIN32;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CONSOLE_LOG;_CRT_SECURE_NO_WARNINGS;_EDITOR;_WINDOWS;WIN32;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src\MADRengine;_thirdparty\includes;_thirdparty\includes\spdlog;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\ImGuizmo-master;_thirdparty\includes\glm;_thirdparty\includes\rapidjson;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\include;_thirdparty\includes\RTTR;_thirdparty\includes\stb-master;_thirdparty\includes\Boost\inc;_thirdparty\includes\KHR;_thirdparty\includes\AK;_thirdparty\includes\samples\SoundEngine\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -153,6 +153,7 @@
     <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLowLevelIODeferred.h" />
     <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkMultipleFileLocation.h" />
     <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\stdafx.h" />
+    <ClInclude Include="src\MADRengine\ECS.h" />
     <ClInclude Include="src\MADRengine\EntryPoint.h" />
     <ClInclude Include="src\MADRengine\Events.h" />
     <ClInclude Include="src\MADRengine\MADRpch.h" />
@@ -168,6 +169,7 @@
     <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLUT.cpp" />
     <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkMultipleFileLocation.cpp" />
     <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\stdafx.cpp" />
+    <ClCompile Include="src\MADRengine\ECS.cpp" />
     <ClCompile Include="src\MADRengine\EntryPoint.cpp" />
     <ClCompile Include="src\MADRengine\Events.cpp" />
     <ClCompile Include="src\MADRengine\MADRpch.cpp" />

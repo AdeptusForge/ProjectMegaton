@@ -12,12 +12,6 @@ workspace "ProjectMegaton"
     }
 	
 	vpaths { 
-        ["src/MADRengine/Framework"] = { "**Assets.**", "**MADRpch.**","**TimeKeeping.**","Scene.**", "**Error.**", "**EntryPoint.**", "**Input.**", "**BehaviorTree.**", "**Serialization.**", "**SoundMananger.**", "**Settings.**"},
-        ["src/MADRengine/Framework/EventSystem"] = {"**Event.**", "**EventListener.**", "**EventSender.**"},
-        ["src/MADRengine/Framework/Rendering"] = {"**Render.**",  "**Texture.**",  "**Shader.**","**Palette.**"},
-        ["src/MADRengine/Framework/ECS"] = {"**ECS.**"},
-        ["src/MADRengine/Framework/ECS/Components"] = {"**ECS.**", "**Transform.**", "**Physics.**", "**RenderModel.**", "**Text.**", "**Camera.**", "**Animator.**", "**Collision.**", "**Particles.**", "**BehaviorTree.**"},
-        ["src/MADRengine/Framework/UI"] = {"**UI.**","**UIManager.**","**Button.**","**Meter.**", "**PauseMenu.**", "**QuitConfirm.**"},
         ["src/MADRengine/Framework/Editor"] = {"**Editor.**", "**EntityEditor.**", "**AnimationEditor.**","**AssetWindow.**","**HeirarchyWindow.**","**DebugWindow.**","**ParticleEditor.**", "**Profiler.**", "**PhysicsEditor.**", "**PaletteEditor.**", "**WwiseWindow.**"}
 	}
 
@@ -79,6 +73,7 @@ project "MADRengine"
     
     defines
     {
+        "CONSOLE_LOG",
         "_CRT_SECURE_NO_WARNINGS",
         "_EDITOR",
 		"_WINDOWS",
@@ -140,6 +135,7 @@ project "MADRengine"
     filter "configurations:Debug"
         defines
         {
+            "CONSOLE_LOG",
             "MADR_ENABLE_ASSERTS",
             "MADR_DEBUG",
             "_DEBUG",
@@ -259,6 +255,7 @@ project "GAME"
 
         defines
         {
+            "CONSOLE_LOG",
             "MADR_DEBUG",
             "_DEBUG",
             "_CONSOLE"

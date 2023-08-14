@@ -12,13 +12,14 @@ int main(int argc, char** argv)
 {
 	argv;
 	argc;
+
 	if (EngineCore::Startup()) 
 	{
 		EngineCore::Loop();
 	}
+	if (EngineCore::Shutdown())
+		return 0;
 
 
-
-
-	return 0;
+	return 1;
 }

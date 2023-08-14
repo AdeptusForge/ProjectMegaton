@@ -79,7 +79,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pmpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MADR_PLATFORM_WINDOWS;MADR_DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MADR_PLATFORM_WINDOWS;CONSOLE_LOG;MADR_DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;..\MADRengine\src;..\MADRengine\_thirdparty\includes;..\MADRengine\_thirdparty\includes\spdlog;..\MADRengine\_thirdparty\includes\imgui-master;..\MADRengine\_thirdparty\includes\ImGuizmo-master;..\MADRengine\_thirdparty\includes\glm;..;..\MADRengine\_thirdparty\includes\magic_enum\include;..\MADRengine\_thirdparty\includes\RTTR;..\MADRengine\_thirdparty\includes\stb-master;..\MADRengine\_thirdparty\includes\GLFW;..\MADRengine\_thirdparty\includes\glad;..\MADRengine\_thirdparty\includes\KHR;..\MADRengine\_thirdparty\includes\AK;..\MADRengine\_thirdparty\includes\samples\SoundEngine\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>

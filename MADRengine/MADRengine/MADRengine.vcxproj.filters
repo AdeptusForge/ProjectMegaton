@@ -22,9 +22,6 @@
     <Filter Include="src\MADRengine">
       <UniqueIdentifier>{F6ACB894-E27A-AC9A-CB0E-1DC1B77B88FF}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\MADRengine\Framework">
-      <UniqueIdentifier>{F3545849-DF79-A7C9-08C5-8C59F448A6E7}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultIOHookBlocking.h">
@@ -66,17 +63,20 @@
     <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\stdafx.h">
       <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClInclude>
+    <ClInclude Include="src\MADRengine\ECS.h">
+      <Filter>src\MADRengine</Filter>
+    </ClInclude>
     <ClInclude Include="src\MADRengine\EntryPoint.h">
-      <Filter>src\MADRengine\Framework</Filter>
+      <Filter>src\MADRengine</Filter>
     </ClInclude>
     <ClInclude Include="src\MADRengine\Events.h">
       <Filter>src\MADRengine</Filter>
     </ClInclude>
     <ClInclude Include="src\MADRengine\MADRpch.h">
-      <Filter>src\MADRengine\Framework</Filter>
+      <Filter>src\MADRengine</Filter>
     </ClInclude>
     <ClInclude Include="src\MADRengine\Settings.h">
-      <Filter>src\MADRengine\Framework</Filter>
+      <Filter>src\MADRengine</Filter>
     </ClInclude>
     <ClInclude Include="src\MADRengine\Trace.h">
       <Filter>src\MADRengine</Filter>
@@ -107,20 +107,23 @@
     <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\stdafx.cpp">
       <Filter>_thirdparty\includes\samples\SoundEngine\Common</Filter>
     </ClCompile>
+    <ClCompile Include="src\MADRengine\ECS.cpp">
+      <Filter>src\MADRengine</Filter>
+    </ClCompile>
     <ClCompile Include="src\MADRengine\EntryPoint.cpp">
-      <Filter>src\MADRengine\Framework</Filter>
+      <Filter>src\MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\Events.cpp">
       <Filter>src\MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\MADRpch.cpp">
-      <Filter>src\MADRengine\Framework</Filter>
+      <Filter>src\MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\Settings.cpp">
-      <Filter>src\MADRengine\Framework</Filter>
+      <Filter>src\MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\TimeKeeping.cpp">
-      <Filter>src\MADRengine\Framework</Filter>
+      <Filter>src\MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\Trace.cpp">
       <Filter>src\MADRengine</Filter>

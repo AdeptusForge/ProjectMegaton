@@ -1,9 +1,9 @@
 #pragma once
 #include "MADRpch.h"
+#include "Trace.h"
 #include <functional>
 #include <map>
 #include <variant>
-#include "AK/SoundEngine/Common/AkSoundEngine.h"
 #include "glm.hpp"
 #include <array>
 #include <any>

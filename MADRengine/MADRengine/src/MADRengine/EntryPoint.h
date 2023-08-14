@@ -6,6 +6,14 @@ namespace EngineCore
 {
 	bool Startup() 
 	{
+		Logging::Startup();
+
+
+
+
+
+
+
 		return true;
 	}
 	void Loop()
@@ -14,7 +22,14 @@ namespace EngineCore
 		{
 			
 		}
+	}
 
+	bool Shutdown() 
+	{
+
+
+		Logging::Log("Engine Shutdown Successful");
+		return true;
 	}
 }
 

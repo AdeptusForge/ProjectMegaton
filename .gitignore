@@ -11,6 +11,7 @@ MADRengine/.vs/ProjectMegaton/v16/Solution.VC.db
 MADRengine/.vs/ProjectMegaton/v16/Solution.VC.db-shm
 MADRengine/.vs/ProjectMegaton/v16/Solution.VC.db-wal
 MADRengine/_bin/Debug-windows-x86_64/MADRengine/MADRengine.idb
+MADRengine/_bin/Debug-windows-x86_64/MADRengine/MADRengine.lib
 MADRengine/_bin-int/Debug-windows-x86_64/MADRengine/MADRengine.tlog/CL.command.1.tlog
 MADRengine/_bin-int/Debug-windows-x86_64/MADRengine/MADRengine.tlog/CL.read.1.tlog
 MADRengine/_bin-int/Debug-windows-x86_64/MADRengine/MADRengine.tlog/CL.write.1.tlog
@@ -30,3 +31,4 @@ MADRengine/_bin-int/Debug-windows-x86_64/ProjectMegaton/ProjectMegaton.tlog/Proj
 MADRengine/.vs/ProjectMegaton/v16/ipch/985b98b5aeeb21bd.ipch
 *.ipch
 *.vs
+

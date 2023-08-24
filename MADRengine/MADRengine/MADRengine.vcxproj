@@ -76,7 +76,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_EDITOR;_WINDOWS;WIN32;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;CONSOLE_LOG;MADR_ENABLE_ASSERTS;MADR_DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src\MADRengine;_thirdparty\includes;_thirdparty\includes\spdlog;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\ImGuizmo-master;_thirdparty\includes\glm;_thirdparty\includes\rapidjson;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\include;_thirdparty\includes\RTTR;_thirdparty\includes\stb-master;_thirdparty\includes\Boost\inc;_thirdparty\includes\KHR;_thirdparty\includes\AK;_thirdparty\includes\samples\SoundEngine\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\MADRengine;_thirdparty\includes;_thirdparty\includes\spdlog;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\ImGuizmo-master;_thirdparty\includes\glm;_thirdparty\includes\rapidjson;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\include;_thirdparty\includes\RTTR;_thirdparty\includes\stb-master;_thirdparty\includes\Boost\inc;_thirdparty\includes\KHR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -90,7 +90,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>glfw3_mt.lib;Shlwapi.lib;_thirdparty\libs\Debug\lib\AkSoundEngine.lib;_thirdparty\libs\Debug\lib\AkMemoryMgr.lib;_thirdparty\libs\Debug\lib\AkStreamMgr.lib;_thirdparty\libs\Debug\lib\AkMusicEngine.lib;_thirdparty\libs\Debug\lib\AkSpatialAudio.lib;_thirdparty\libs\Debug\lib\AkAudioInputSource.lib;Winmm.lib;ws2_32.lib;_thirdparty\libs\steam\steam_api64.lib;_thirdparty\freetype\lib\freetype_debug.lib;_thirdparty\libs\Debug\lib\CommunicationCentral.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3_mt.lib;Shlwapi.lib;Winmm.lib;ws2_32.lib;_thirdparty\freetype\lib\freetype_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -98,7 +98,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CONSOLE_LOG;_CRT_SECURE_NO_WARNINGS;_EDITOR;_WINDOWS;WIN32;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MADR_ENABLE_ASSERTS;MADR_RELEASE;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src\MADRengine;_thirdparty\includes;_thirdparty\includes\spdlog;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\ImGuizmo-master;_thirdparty\includes\glm;_thirdparty\includes\rapidjson;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\include;_thirdparty\includes\RTTR;_thirdparty\includes\stb-master;_thirdparty\includes\Boost\inc;_thirdparty\includes\KHR;_thirdparty\includes\AK;_thirdparty\includes\samples\SoundEngine\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\MADRengine;_thirdparty\includes;_thirdparty\includes\spdlog;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\ImGuizmo-master;_thirdparty\includes\glm;_thirdparty\includes\rapidjson;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\include;_thirdparty\includes\RTTR;_thirdparty\includes\stb-master;_thirdparty\includes\Boost\inc;_thirdparty\includes\KHR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -116,7 +116,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalDependencies>glfw3_mt.lib;Shlwapi.lib;_thirdparty\libs\Debug\lib\AkSoundEngine.lib;_thirdparty\libs\Debug\lib\AkMemoryMgr.lib;_thirdparty\libs\Debug\lib\AkStreamMgr.lib;_thirdparty\libs\Debug\lib\AkMusicEngine.lib;_thirdparty\libs\Debug\lib\AkSpatialAudio.lib;_thirdparty\libs\Debug\lib\AkAudioInputSource.lib;Winmm.lib;ws2_32.lib;_thirdparty\libs\steam\steam_api64.lib;_thirdparty\freetype\lib\freetype_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3_mt.lib;Shlwapi.lib;Winmm.lib;ws2_32.lib;_thirdparty\freetype\lib\freetype_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|x64'">
@@ -124,7 +124,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CONSOLE_LOG;_CRT_SECURE_NO_WARNINGS;_EDITOR;_WINDOWS;WIN32;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src\MADRengine;_thirdparty\includes;_thirdparty\includes\spdlog;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\ImGuizmo-master;_thirdparty\includes\glm;_thirdparty\includes\rapidjson;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\include;_thirdparty\includes\RTTR;_thirdparty\includes\stb-master;_thirdparty\includes\Boost\inc;_thirdparty\includes\KHR;_thirdparty\includes\AK;_thirdparty\includes\samples\SoundEngine\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\MADRengine;_thirdparty\includes;_thirdparty\includes\spdlog;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\ImGuizmo-master;_thirdparty\includes\glm;_thirdparty\includes\rapidjson;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\include;_thirdparty\includes\RTTR;_thirdparty\includes\stb-master;_thirdparty\includes\Boost\inc;_thirdparty\includes\KHR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -136,23 +136,10 @@
       <SubSystem>Windows</SubSystem>
     </Link>
     <Lib>
-      <AdditionalDependencies>glfw3_mt.lib;Shlwapi.lib;_thirdparty\libs\Debug\lib\AkSoundEngine.lib;_thirdparty\libs\Debug\lib\AkMemoryMgr.lib;_thirdparty\libs\Debug\lib\AkStreamMgr.lib;_thirdparty\libs\Debug\lib\AkMusicEngine.lib;_thirdparty\libs\Debug\lib\AkSpatialAudio.lib;_thirdparty\libs\Debug\lib\AkAudioInputSource.lib;Winmm.lib;ws2_32.lib;_thirdparty\libs\steam\steam_api64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3_mt.lib;Shlwapi.lib;Winmm.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultIOHookBlocking.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultIOHookDeferred.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultLowLevelIODispatcher.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFileHelpers.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFileHelpersBase.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFileLocationBase.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackage.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLUT.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLowLevelIO.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLowLevelIOBlocking.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLowLevelIODeferred.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\AkMultipleFileLocation.h" />
-    <ClInclude Include="_thirdparty\includes\samples\SoundEngine\Common\stdafx.h" />
     <ClInclude Include="src\MADRengine\ECS.h" />
     <ClInclude Include="src\MADRengine\EntryPoint.h" />
     <ClInclude Include="src\MADRengine\Events.h" />
@@ -161,14 +148,6 @@
     <ClInclude Include="src\MADRengine\Trace.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultIOHookBlocking.cpp" />
-    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultIOHookDeferred.cpp" />
-    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkDefaultLowLevelIODispatcher.cpp" />
-    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkFileLocationBase.cpp" />
-    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackage.cpp" />
-    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkFilePackageLUT.cpp" />
-    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\AkMultipleFileLocation.cpp" />
-    <ClCompile Include="_thirdparty\includes\samples\SoundEngine\Common\stdafx.cpp" />
     <ClCompile Include="src\MADRengine\ECS.cpp" />
     <ClCompile Include="src\MADRengine\EntryPoint.cpp" />
     <ClCompile Include="src\MADRengine\Events.cpp" />

@@ -34,9 +34,6 @@ IncludeDir["rttr"] = "MADRengine/_thirdparty/includes/RTTR"
 IncludeDir["stbi"] = "MADRengine/_thirdparty/includes/stb-master"
 IncludeDir["boost"] = "MADRengine/_thirdparty/includes/Boost/inc"
 IncludeDir["KHR"] = "MADRengine/_thirdparty/includes/KHR"
-IncludeDir["AK"] = "MADRengine/_thirdparty/includes/AK"
-IncludeDir["AKSample"] = "MADRengine/_thirdparty/includes/samples/SoundEngine/Common"
-IncludeDir["Steam"] = "MADRengine/_thirdparty/includes/steam"
 
 group "Dependencies"
   include "MADRengine/_thirdparty/includes/imgui-master"
@@ -98,24 +95,15 @@ project "MADRengine"
         "%{IncludeDir.stbi}",
         "%{IncludeDir.boost}",
         "%{IncludeDir.KHR}",
-        "%{IncludeDir.AK}",
-        "%{IncludeDir.AKSample}"
     }
 
     links
     {
         "glfw3_mt.lib",
 		"Shlwapi.lib",
-        "MADRengine/_thirdparty/libs/Debug/lib/AkSoundEngine.lib",
-        "MADRengine/_thirdparty/libs/Debug/lib/AkMemoryMgr.lib",
-        "MADRengine/_thirdparty/libs/Debug/lib/AkStreamMgr.lib",
-        "MADRengine/_thirdparty/libs/Debug/lib/AkMusicEngine.lib",
-        "MADRengine/_thirdparty/libs/Debug/lib/AkSpatialAudio.lib",
-        "MADRengine/_thirdparty/libs/Debug/lib/AkAudioInputSource.lib",
         "ImGui",
 		"Winmm.lib",
 		"ws2_32.lib",
-		"MADRengine/_thirdparty/libs/steam/steam_api64.lib"
     }
 
     flags
@@ -147,7 +135,6 @@ project "MADRengine"
             --"MADRengine/_thirdparty/fmod/lib/x64/fmodL_vc.lib",
             --"MADRengine/_thirdparty/RTTR/lib/debug/librttr_core_d.lib"
             "MADRengine/_thirdparty/freetype/lib/freetype_debug.lib",
-            "MADRengine/_thirdparty/libs/Debug/lib/CommunicationCentral.lib"
         }
         runtime "Debug"
         symbols "on"
@@ -215,8 +202,6 @@ project "GAME"
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
         "%{IncludeDir.KHR}",
-		"%{IncludeDir.AK}",
-		"%{IncludeDir.AKSample}"
     }
 
     links
@@ -234,8 +219,6 @@ project "GAME"
     postbuildcommands
     {
         "robocopy \"../Assets/\" \"../_bin/" .. outputdir .. "/%{prj.name}/Assets/\" /mir",
-		"xcopy /Y \"$(SolutionDir)steam_api64.dll\" \"$(targetdir)\"",
-		"xcopy /Y \"$(SolutionDir)steam_appid.txt\" \"$(targetdir)\"",
 		"xcopy /Y \"$(SolutionDir)freetype.dll\" \"$(targetdir)\""
     }
 
